@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.8">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Step 2: ij Basics</title>
+<link type="text/css" href="../../skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="../../skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="../../skin/print.css" rel="stylesheet">
+<link type="text/css" href="../../skin/profile.css" rel="stylesheet">
+<script src="../../skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="../../skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="../../skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../../">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+<a href="http://www.apache.org/">apache</a> &gt; <a href="http://db.apache.org/">db</a><script src="../../skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<!--+
+    |header
+    +-->
+<div class="header">
+<!--+
+    |start group logo
+    +-->
+<div class="grouplogo">
+<a href="http://db.apache.org/derby"><img class="logoImage" alt="Apache Derby" src="../../images/derby-logo-web.png" title="Derby is a zero-admin Java RDBMS"></a>
+</div>
+<!--+
+    |end group logo
+    +-->
+<!--+
+    |start Project Logo
+    +-->
+<div class="projectlogoA1">
+<a href="http://db.apache.org"><img class="logoImage" alt="Apache DB Project" src="../../images/db-logo-white.png" title="Apache DB creates and maintains database solutions."></a>
+</div>
+<!--+
+    |end Project Logo
+    +-->
+<!--+
+    |start Tabs
+    +-->
+<ul id="tabs">
+<li>
+<a class="unselected" href="../../index.html">Home</a>
+</li>
+<li>
+<a class="unselected" href="../../quick_start.html">Quick Start</a>
+</li>
+<li>
+<a class="unselected" href="../../derby_downloads.html">Download</a>
+</li>
+<li>
+<a class="unselected" href="../../derby_comm.html">Community</a>
+</li>
+<li>
+<a class="unselected" href="../../manuals/index.html">Documentation</a>
+</li>
+<li class="current">
+<a class="selected" href="../../blogs/index.html">Resources</a>
+</li>
+</ul>
+<!--+
+    |end Tabs
+    +-->
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<!--+
+    |start Subtabs
+    +-->
+<div id="level2tabs"></div>
+<!--+
+    |end Endtabs
+    +-->
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+
+             &nbsp;
+           </div>
+<!--+
+    |start Menu, mainarea
+    +-->
+<!--+
+    |start Menu
+    +-->
+<div id="menu">
+<div onclick="SwitchMenu('menu_1.1', '../../skin/')" id="menu_1.1Title" class="menutitle">Blogs and Articles About Derby</div>
+<div id="menu_1.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../blogs/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#blogs">Blogs</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', '../../skin/')" id="menu_1.1.3Title" class="menutitle">Articles</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div onclick="SwitchMenu('menu_1.1.3.1', '../../skin/')" id="menu_1.1.3.1Title" class="menutitle">Tutorials, Tips and Tuning</div>
+<div id="menu_1.1.3.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../blogs/index.html#getstarted">Getting Started</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#features">Features, Hints and Tips</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#security">Security</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#performance">Performance and Tuning</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3.2', '../../skin/')" id="menu_1.1.3.2Title" class="menutitle">Tools and Migration</div>
+<div id="menu_1.1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../blogs/index.html#tools">Tools</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#migration">Migration</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3.3', '../../skin/')" id="menu_1.1.3.3Title" class="menutitle">Applications</div>
+<div id="menu_1.1.3.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../blogs/index.html#client">Client</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#middletier">Middle Tier</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#persistence">Persistence</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#scalability">Scalability and Failover</a>
+</div>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', '../../skin/')" id="menu_1.2Title" class="menutitle">Integration With Other Products</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../integrate/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../../integrate/index.html#uses">What works with Derby?</a>
+</div>
+<div class="menuitem">
+<a href="../../integrate/index.html#products">Product Writeups</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', '../../skin/')" id="menu_1.3Title" class="menutitle">Eclipse Plug-ins</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../integrate/derby_plugin_info.html">Info</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.4', '../../skin/')" id="menu_selected_1.4Title" class="menutitle" style="background-image: url('../../skin/images/chapter_open.gif');">Papers and Presentations</div>
+<div id="menu_selected_1.4" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../../papers/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.2', '../../skin/')" id="menu_1.4.2Title" class="menutitle">Derby Engine</div>
+<div id="menu_1.4.2" class="menuitemgroup">
+<div onclick="SwitchMenu('menu_1.4.2.1', '../../skin/')" id="menu_1.4.2.1Title" class="menutitle">Javadoc</div>
+<div id="menu_1.4.2.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/engine">Engine</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/language">Language</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/tools">Tools</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/publishedapi">API</a>
+</div>
+</div>
+<div class="menuitem">
+<a href="../../papers/derby_arch.html">Architecture</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/btree_package.html">BTree</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/pageformats.html">Disk Page Format</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/derby_htw.html">How Things Work</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/Intersect-design.html">Intersect &amp; Except</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/JDBCImplementation.html">JDBC</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/logformats.html">Log Format</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/recovery.html">Logging &amp; Recovery</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/optimizer.html">Optimizer</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/engine/org/apache/derby/iapi/types/package-summary.html#package_description">Type System</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/versionupgrade.html">Versioning</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', '../../skin/')" id="menu_1.4.3Title" class="menutitle">Derby Network Client</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../papers/DerbyClientSpec.html">Functional Spec</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.4.4', '../../skin/')" id="menu_selected_1.4.4Title" class="menutitle" style="background-image: url('../../skin/images/chapter_open.gif');">Derby Tutorial</div>
+<div id="menu_selected_1.4.4" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../../papers/DerbyTut/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/DerbyTut/install_software.html">Step 1: Install Software</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Step 2: ij Basics</div>
+</div>
+<div class="menuitem">
+<a href="../../papers/DerbyTut/embedded_intro.html">Step 3: Embedded Derby</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/DerbyTut/ns_intro.html">Step 4: Derby Network Server</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', '../../skin/')" id="menu_1.4.5Title" class="menutitle">Presentations</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../papers/ApacheCon.html">ApacheCon</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/MiscPresentations.html#Victorian+Java+User+Group">Victorian JUG 2008</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/MiscPresentations.html#OSCON+2005">OSCON 2005</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/MiscPresentations.html#Colorado+Software+Summit+2004">Colorado 2004</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', '../../skin/')" id="menu_1.5Title" class="menutitle">The Apache Software Foundation</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://www.apache.org/licenses/">License</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/foundation/sponsorship.html">Donate</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/security/">Security</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/">ASF Home</a>
+</div>
+</div>
+<!--+
+    |start Search
+    +-->
+<div class="searchbox">
+<hr>
+<form action="http://www.google.com/search" method="get">
+<input value="db.apache.org" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="18" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                  <input name="Search" value="Search" type="submit">
+</form>
+</div>
+<!--+
+    |end search
+    +-->
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="../../skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<!--+
+  |alternative credits
+  +-->
+<div id="credit2"></div>
+</div>
+<!--+
+    |end Menu
+    +-->
+<!--+
+    |start content
+    +-->
+<div id="content">
+<div class="trail">Font size: 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Step 2: ij Basics</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#ij_intro">Introduction</a>
+</li>
+<li>
+<a href="#ij_setup">Set the environment</a>
+</li>
+<li>
+<a href="#ij_start">Start up ij</a>
+</li>
+<li>
+<a href="#ij_create">Create a database</a>
+</li>
+<li>
+<a href="#ij_connect">Connect to a database</a>
+<ul class="minitoc">
+<li>
+<a href="#Protocol">Protocol</a>
+</li>
+<li>
+<a href="#Database">Database</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#ij_sql">Execute SQL statements</a>
+</li>
+<li>
+<a href="#ij_disconnect">Disconnect from a database</a>
+</li>
+<li>
+<a href="#ij_exit">Exit</a>
+</li>
+<li>
+<a href="#Run+SQL+Scripts">Run SQL Scripts</a>
+</li>
+</ul>
+</div> 
+
+
+<a name="N1000D"></a><a name="ij_intro"></a>
+<h2 class="boxed">Introduction</h2>
+<div class="section">
+<p>
+
+<span class="codefrag">ij</span> is an interactive SQL scripting tool that comes with Derby. 
+It can be used with the Derby Embedded JDBC driver 
+or with a client JDBC driver, such as the Derby Network Client.
+</p>
+<p>
+This section uses the Derby Embedded JDBC driver to introduce a few 
+<span class="codefrag">ij</span> features.
+The information presented here is minimal, just enough to get you started.
+For a more complete introduction, see the
+<a href="http://db.apache.org/derby/docs/dev/tools/ctoolsij32837.html">Getting
+started with ij</a> section
+in the <a href="http://db.apache.org/derby/manuals/">Tools 
+and Utilities Guide</a>.
+</p>
+</div>
+
+
+<a name="N10028"></a><a name="ij_setup"></a>
+<h2 class="boxed">Set the environment</h2>
+<div class="section">
+<p>
+To set up the environment,
+follow the 
+"<a href="install_software.html#derby_configure">Configure Embedded Derby</a>"
+instructions.
+</p>
+</div>
+
+
+<a name="N10036"></a><a name="ij_start"></a>
+<h2 class="boxed">Start up ij</h2>
+<div class="section">
+<p>Start up <span class="codefrag">ij</span> with this command:</p>
+<p class="code-block">java org.apache.derby.tools.ij</p>
+<p>You should see the output shown below:</p>
+<p class="code-block">ij version 10.4
+ij&gt;
+</p>
+<p>
+The error below means the class path isn't set correctly:
+</p>
+<p class="code-block">java org.apache.derby.tools.ij
+Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/derby/tools/ij
+</p>
+<p>
+For help resolving class path problems, see the 
+"<a href="install_software.html#derby_configure">Configure Embedded Derby</a>"
+and
+"<a href="install_software.html#derby_verify">Verify Derby</a>"
+instructions.
+</p>
+</div>
+
+
+<a name="N10060"></a><a name="ij_create"></a>
+<h2 class="boxed">Create a database</h2>
+<div class="section">
+<p>
+To create a database,
+specify the <span class="codefrag">create=true</span> attribute
+in the connection URL. 
+For example, the command below creates a new database called
+<span class="codefrag">MyDbTest</span>:
+</p>
+<p class="code-block">ij&gt; connect 'jdbc:derby:MyDbTest;create=true';</p>
+<p>
+Now exit <span class="codefrag">ij</span>:
+</p>
+<p class="code-block">ij&gt; exit; </p>
+<p>
+List the contents of your directory with
+<span class="codefrag">ls</span> (UNIX) or
+<span class="codefrag">dir</span> (Windows).
+On UNIX you'll see output like this:
+</p>
+<p class="code-block">$ ls
+MyDbTest  derby.log
+</p>
+<p>
+The <span class="codefrag">MyDbTest</span> directory contains the files that make up 
+the database you just created.
+The <span class="codefrag">derby.log</span> file is an error log, which is helpful
+whenever things don't work as expected.
+</p>
+</div>
+
+
+<a name="N10094"></a><a name="ij_connect"></a>
+<h2 class="boxed">Connect to a database</h2>
+<div class="section">
+<p>
+Start up <span class="codefrag">ij</span> again and 
+<a href="http://db.apache.org/derby/docs/dev/tools/rtoolsijcomref22318.html">connect</a> to the database you just created:
+</p>
+<p class="code-block">java org.apache.derby.tools.ij
+ij&gt; connect 'jdbc:derby:MyDbTest';
+</p>
+<p>
+We'll take a quick look at the
+protocol ("<span class="codefrag">jdbc:derby:</span>") and
+database ("<span class="codefrag">MyDbTest</span>") in this connection URL.
+</p>
+<a name="N100B1"></a><a name="Protocol"></a>
+<h3 class="boxed">Protocol</h3>
+<p>
+Internally, <span class="codefrag">ij</span> determines by default which driver to load
+from the protocol ("<span class="codefrag">jdbc:derby:</span>").
+In this case, it knows to load the embedded JDBC driver.
+We could also have specified the protocol with a property as shown below:
+</p>
+<p class="code-block">java -Dij.protocol=jdbc:derby: org.apache.derby.tools.ij
+ij&gt; connect 'MyDbTest';
+</p>
+<p>
+For more information about <span class="codefrag">ij</span> startup properties see
+<a href="http://db.apache.org/derby/docs/dev/tools/ttoolsij30600.html">Starting
+ij using properties</a> in the
+<a href="http://db.apache.org/derby/docs/dev/tools/ttoolsij98878.html">Tools 
+and Utilities Guide</a>.
+</p>
+<a name="N100D3"></a><a name="Database"></a>
+<h3 class="boxed">Database</h3>
+<p>
+Connecting to the <span class="codefrag">MyDbTest</span> database in the connection URL
+above works
+because the <span class="codefrag">MyDbTest</span> database directory is
+in the current working directory;
+<em>i.e.</em>,
+the directory where you started up <span class="codefrag">ij</span>.
+</p>
+<p>
+Let's say that your current directory location is 
+<span class="codefrag">/home/bill/databases</span>
+and that you decide to change your directory to a different place entirely.
+You can connect to the <span class="codefrag">MyDbTest</span> database 
+by specifying the complete directory path,
+like this:
+</p>
+<p class="code-block">java org.apache.derby.tools.ij
+ij&gt; connect 'jdbc:derby:/home/bill/databases/MyDbTest';
+</p>
+<p>
+You could also specify the <a href="http://db.apache.org/derby/docs/dev/devguide/cdevdvlp27610.html">Derby system home</a> for the database like this:
+</p>
+<p class="code-block">java org.apache.derby.tools.ij -Dderby.system.home=/home/bill/databases
+ij&gt; connect 'jdbc:derby:MyDbTest';
+</p>
+<p>
+The <em>Developer's Guide</em> provides information
+about where Derby looks for databases:
+</p>
+<ul>
+   
+<li>
+<a href="http://db.apache.org/derby/docs/dev/devguide/cdevdvlp34964.html">Connecting to databases</a>
+</li>
+   
+<li> 
+<a href="http://db.apache.org/derby/docs/dev/devguide/cdevdvlp13018.html">Defining the system directory</a>
+</li>
+
+</ul>
+</div>
+
+
+<a name="N10116"></a><a name="ij_sql"></a>
+<h2 class="boxed">Execute SQL statements</h2>
+<div class="section">
+<p>
+Once you connect to a database, you can execute SQL statements.
+<span class="codefrag">ij</span> expects each statement to be terminated
+with a semicolon (;); for example:
+</p>
+<p class="code-block">ij&gt; create table derbyDB(num int, addr varchar(40));
+ij&gt; insert into derbyDB values (1956,'Webster St.');
+ij&gt; insert into derbyDB values (1910,'Union St.');
+ij&gt; update derbyDB set num=180, addr='Grand Ave.' where num=1956;
+ij&gt; select * from derbyDb;
+</p>
+</div>
+
+
+<a name="N10127"></a><a name="ij_disconnect"></a>
+<h2 class="boxed">Disconnect from a database</h2>
+<div class="section">
+<p>
+The <a href="http://db.apache.org/derby/docs/dev/tools/rtoolsijcomref20382.html">disconnect</a> 
+command disconnects from the current database:
+</p>
+<p class="code-block">ij&gt; disconnect;</p>
+</div>
+
+
+<a name="N10139"></a><a name="ij_exit"></a>
+<h2 class="boxed">Exit</h2>
+<div class="section">
+<p>
+The <a href="http://db.apache.org/derby/docs/dev/tools/rtoolsijcomref33358.html">exit</a>
+command quits out of <span class="codefrag">ij</span> and, in embedded mode,
+shuts down the Derby database:
+</p>
+<p class="code-block">ij&gt; exit;</p>
+</div>
+
+
+<a name="N1014E"></a><a name="Run+SQL+Scripts"></a>
+<h2 class="boxed">Run SQL Scripts</h2>
+<div class="section">
+<p>
+You can execute SQL scripts in <span class="codefrag">ij</span> as shown below:
+</p>
+<p class="code-block">ij&gt; run 'my_file.sql';</p>
+<p>
+You can also run SQL scripts from the command line:
+</p>
+<p class="code-block">java org.apache.derby.tools.ij my_file.sql</p>
+<p>
+The <a href="http://db.apache.org/derby/docs/dev/tools/ttoolsij98878.html">Tools and Utilities Guide</a>
+provides more information about running SQL scripts from <span class="codefrag">ij</span>.
+</p>
+<p>
+After completing these <span class="codefrag">ij</span> steps, you're
+ready to move to "<a href="embedded_intro.html">Step 3: Embedded Derby</a>".
+</p>
+</div>
+
+
+</div>
+<!--+
+    |end content
+    +-->
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<!--+
+    |start bottomstrip
+    +-->
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2004-2014 Apache, Apache DB, Apache Derby, Apache Torque, Apache JDO, Apache DDLUtils, the Derby hat logo, the Apache JDO logo, and the Apache feather logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:derby-user@db.apache.org?subject=Feedback%C2%A0papers/DerbyTut/ij_intro.html">derby-user@db.apache.org</a>
+</div>
+<!--+
+    |end bottomstrip
+    +-->
+</div>
+</body>
+</html>

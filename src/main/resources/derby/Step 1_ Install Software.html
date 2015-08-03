@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.8">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Step 1: Install Software</title>
+<link type="text/css" href="../../skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="../../skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="../../skin/print.css" rel="stylesheet">
+<link type="text/css" href="../../skin/profile.css" rel="stylesheet">
+<script src="../../skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="../../skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="../../skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../../">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+<a href="http://www.apache.org/">apache</a> &gt; <a href="http://db.apache.org/">db</a><script src="../../skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<!--+
+    |header
+    +-->
+<div class="header">
+<!--+
+    |start group logo
+    +-->
+<div class="grouplogo">
+<a href="http://db.apache.org/derby"><img class="logoImage" alt="Apache Derby" src="../../images/derby-logo-web.png" title="Derby is a zero-admin Java RDBMS"></a>
+</div>
+<!--+
+    |end group logo
+    +-->
+<!--+
+    |start Project Logo
+    +-->
+<div class="projectlogoA1">
+<a href="http://db.apache.org"><img class="logoImage" alt="Apache DB Project" src="../../images/db-logo-white.png" title="Apache DB creates and maintains database solutions."></a>
+</div>
+<!--+
+    |end Project Logo
+    +-->
+<!--+
+    |start Tabs
+    +-->
+<ul id="tabs">
+<li>
+<a class="unselected" href="../../index.html">Home</a>
+</li>
+<li>
+<a class="unselected" href="../../quick_start.html">Quick Start</a>
+</li>
+<li>
+<a class="unselected" href="../../derby_downloads.html">Download</a>
+</li>
+<li>
+<a class="unselected" href="../../derby_comm.html">Community</a>
+</li>
+<li>
+<a class="unselected" href="../../manuals/index.html">Documentation</a>
+</li>
+<li class="current">
+<a class="selected" href="../../blogs/index.html">Resources</a>
+</li>
+</ul>
+<!--+
+    |end Tabs
+    +-->
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<!--+
+    |start Subtabs
+    +-->
+<div id="level2tabs"></div>
+<!--+
+    |end Endtabs
+    +-->
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+
+             &nbsp;
+           </div>
+<!--+
+    |start Menu, mainarea
+    +-->
+<!--+
+    |start Menu
+    +-->
+<div id="menu">
+<div onclick="SwitchMenu('menu_1.1', '../../skin/')" id="menu_1.1Title" class="menutitle">Blogs and Articles About Derby</div>
+<div id="menu_1.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../blogs/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#blogs">Blogs</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', '../../skin/')" id="menu_1.1.3Title" class="menutitle">Articles</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div onclick="SwitchMenu('menu_1.1.3.1', '../../skin/')" id="menu_1.1.3.1Title" class="menutitle">Tutorials, Tips and Tuning</div>
+<div id="menu_1.1.3.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../blogs/index.html#getstarted">Getting Started</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#features">Features, Hints and Tips</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#security">Security</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#performance">Performance and Tuning</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3.2', '../../skin/')" id="menu_1.1.3.2Title" class="menutitle">Tools and Migration</div>
+<div id="menu_1.1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../blogs/index.html#tools">Tools</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#migration">Migration</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3.3', '../../skin/')" id="menu_1.1.3.3Title" class="menutitle">Applications</div>
+<div id="menu_1.1.3.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../blogs/index.html#client">Client</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#middletier">Middle Tier</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#persistence">Persistence</a>
+</div>
+<div class="menuitem">
+<a href="../../blogs/index.html#scalability">Scalability and Failover</a>
+</div>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', '../../skin/')" id="menu_1.2Title" class="menutitle">Integration With Other Products</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../integrate/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../../integrate/index.html#uses">What works with Derby?</a>
+</div>
+<div class="menuitem">
+<a href="../../integrate/index.html#products">Product Writeups</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', '../../skin/')" id="menu_1.3Title" class="menutitle">Eclipse Plug-ins</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../integrate/derby_plugin_info.html">Info</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.4', '../../skin/')" id="menu_selected_1.4Title" class="menutitle" style="background-image: url('../../skin/images/chapter_open.gif');">Papers and Presentations</div>
+<div id="menu_selected_1.4" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../../papers/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.2', '../../skin/')" id="menu_1.4.2Title" class="menutitle">Derby Engine</div>
+<div id="menu_1.4.2" class="menuitemgroup">
+<div onclick="SwitchMenu('menu_1.4.2.1', '../../skin/')" id="menu_1.4.2.1Title" class="menutitle">Javadoc</div>
+<div id="menu_1.4.2.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/engine">Engine</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/language">Language</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/tools">Tools</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/publishedapi">API</a>
+</div>
+</div>
+<div class="menuitem">
+<a href="../../papers/derby_arch.html">Architecture</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/btree_package.html">BTree</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/pageformats.html">Disk Page Format</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/derby_htw.html">How Things Work</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/Intersect-design.html">Intersect &amp; Except</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/JDBCImplementation.html">JDBC</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/logformats.html">Log Format</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/recovery.html">Logging &amp; Recovery</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/optimizer.html">Optimizer</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/engine/org/apache/derby/iapi/types/package-summary.html#package_description">Type System</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/versionupgrade.html">Versioning</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', '../../skin/')" id="menu_1.4.3Title" class="menutitle">Derby Network Client</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../papers/DerbyClientSpec.html">Functional Spec</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.4.4', '../../skin/')" id="menu_selected_1.4.4Title" class="menutitle" style="background-image: url('../../skin/images/chapter_open.gif');">Derby Tutorial</div>
+<div id="menu_selected_1.4.4" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../../papers/DerbyTut/index.html">Overview</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Step 1: Install Software</div>
+</div>
+<div class="menuitem">
+<a href="../../papers/DerbyTut/ij_intro.html">Step 2: ij Basics</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/DerbyTut/embedded_intro.html">Step 3: Embedded Derby</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/DerbyTut/ns_intro.html">Step 4: Derby Network Server</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', '../../skin/')" id="menu_1.4.5Title" class="menutitle">Presentations</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../../papers/ApacheCon.html">ApacheCon</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/MiscPresentations.html#Victorian+Java+User+Group">Victorian JUG 2008</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/MiscPresentations.html#OSCON+2005">OSCON 2005</a>
+</div>
+<div class="menuitem">
+<a href="../../papers/MiscPresentations.html#Colorado+Software+Summit+2004">Colorado 2004</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', '../../skin/')" id="menu_1.5Title" class="menutitle">The Apache Software Foundation</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://www.apache.org/licenses/">License</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/foundation/sponsorship.html">Donate</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/security/">Security</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/">ASF Home</a>
+</div>
+</div>
+<!--+
+    |start Search
+    +-->
+<div class="searchbox">
+<hr>
+<form action="http://www.google.com/search" method="get">
+<input value="db.apache.org" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="18" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                  <input name="Search" value="Search" type="submit">
+</form>
+</div>
+<!--+
+    |end search
+    +-->
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="../../skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<!--+
+  |alternative credits
+  +-->
+<div id="credit2"></div>
+</div>
+<!--+
+    |end Menu
+    +-->
+<!--+
+    |start content
+    +-->
+<div id="content">
+<div class="trail">Font size: 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Step 1: Install Software</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Introduction">Introduction</a>
+</li>
+<li>
+<a href="#jdk">Java Development Kit (JDK)</a>
+<ul class="minitoc">
+<li>
+<a href="#jdk_install">Install JDK</a>
+</li>
+<li>
+<a href="#jdk_configure">Configure JDK</a>
+</li>
+<li>
+<a href="#jdk_verify">Verify JDK</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#derby">Apache Derby</a>
+<ul class="minitoc">
+<li>
+<a href="#derby_download">Download Derby</a>
+</li>
+<li>
+<a href="#derby_install">Install Derby</a>
+</li>
+<li>
+<a href="#set_derby_install">Set DERBY_INSTALL</a>
+</li>
+<li>
+<a href="#derby_configure">Configure Embedded Derby</a>
+</li>
+<li>
+<a href="#derby_verify">Verify Derby</a>
+</li>
+</ul>
+</li>
+</ul>
+</div> 
+
+
+<a name="N1000D"></a><a name="Introduction"></a>
+<h2 class="boxed">Introduction</h2>
+<div class="section">
+<p>
+This tutorial
+requires the Java Development Kit (JDK)
+and the Apache Derby software.
+</p>
+<p>
+First, this section describes which JDK release is required, 
+asks you to install it if you haven't already,
+then shows you how to configure and verify your installation.
+</p>
+<p>
+Next, it shows you how to install the Apache Derby software,
+configure your environment to use the Derby Embedded JDBC driver,
+and verify your installation with the Derby <span class="codefrag">sysinfo</span> tool.
+</p>
+</div>
+
+
+<a name="N10020"></a><a name="jdk"></a>
+<h2 class="boxed">Java Development Kit (JDK)</h2>
+<div class="section">
+<p>Derby requires Java 2 Standard Edition (J2SE) 6 or higher.
+Only the Java Runtime Environment (JRE) is required to run Derby,
+but this tutorial compiles a Java application, so it requires
+the Java Development Kit (JDK).
+</p>
+<p>
+If you already have a JDK installed, 
+<a href="#jdk_verify">verify</a> you are configured to use it,
+then proceed
+to the <a href="#derby">Apache Derby</a> installation section.
+</p>
+<a name="N10034"></a><a name="jdk_install"></a>
+<h3 class="boxed">Install JDK</h3>
+<p>
+If you have not already installed a JDK,
+download and install it now. 
+No specific vendor implementation is required;
+the only requirement is that it be certified for J2SE 6 or higher.
+Java's reference implementation is at
+<a class="external" href="http://www.oracle.com/technetwork/java/javase/overview/index.html">http://www.oracle.com/technetwork/java/javase/overview/index.html</a>.
+After installing the JDK of your choice, proceed to the next section.
+</p>
+<a name="N10042"></a><a name="jdk_configure"></a>
+<h3 class="boxed">Configure JDK</h3>
+<p>
+Set the <span class="codefrag">JAVA_HOME</span> environment variable to the root location of
+the JDK installation directory.
+The examples below use
+<span class="codefrag">C:\jdk1.7</span> for Windows and 
+<span class="codefrag">/opt/jdk1.7</span> for UNIX, but be sure to use the actual
+location on your system. (e.g. The default installation location used by the JDK 
+installer might be something like C:\Program Files\Java\jdk1.7.0_11-b21)
+</p>
+<p class="code-block">Windows:
+C:\&gt; set JAVA_HOME=C:\jdk1.7
+</p>
+<p class="code-block">UNIX Korn Shell:
+$ export JAVA_HOME=/opt/jdk1.7
+</p>
+<p>
+Next set the <span class="codefrag">PATH</span> environment variable to include the JDK
+<span class="codefrag">bin</span> directory.
+The <span class="codefrag">PATH</span> variable tells the operating system where to find the
+<span class="codefrag">java</span> interpreter and the <span class="codefrag">javac</span> compiler.
+</p>
+<p class="code-block">Windows:
+C:\&gt; set PATH=%PATH%;%JAVA_HOME%\bin
+</p>
+<p>In Windows, these environment variables can also be set from - right click "My Computer" -&gt; Advanced -&gt; Environment Variables.</p>
+<p class="code-block">UNIX Korn Shell:
+$ export PATH=$JAVA_HOME/bin:$PATH
+</p>
+<a name="N1007A"></a><a name="jdk_verify"></a>
+<h3 class="boxed">Verify JDK</h3>
+<p>
+Use the <span class="codefrag">java -version</span> command, as shown below,
+to verify the installed release:
+</p>
+<p class="code-block">java -version
+java version "1.7.0_11"
+Java(TM) SE Runtime Environment (build 1.7.0_11-b21)
+Java HotSpot(TM) 64-Bit Server VM (build 23.6-b04, mixed mode)
+</p>
+<p>
+The output you see may be different from what is shown above because
+the <span class="codefrag">java -version</span> command outputs vendor-specific information;
+however, if you don't see what looks like valid version information, then 
+<strong>STOP!</strong>
+And don't proceed until you resolve that problem.
+</p>
+</div>
+
+
+<a name="N10095"></a><a name="derby"></a>
+<h2 class="boxed">Apache Derby</h2>
+<div class="section">
+<a name="N1009B"></a><a name="derby_download"></a>
+<h3 class="boxed">Download Derby</h3>
+<p>
+Download the binary Apache Derby distribution from the Derby web site at 
+<a href="http://db.apache.org/derby/derby_downloads.html">http://db.apache.org/derby/derby_downloads.html</a>.
+These tutorial instructions use version 10.11.1.1 and 
+assume you downloaded one of the binary distribution files 
+listed in the table below:
+</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+     
+<tr>
+<th colspan="1" rowspan="1">Operating System</th><th colspan="1" rowspan="1">Download File</th>
+</tr>
+     
+<tr>
+<td colspan="1" rowspan="1">Windows</td><td colspan="1" rowspan="1">db-derby-10.11.1.1-bin.zip</td>
+</tr>
+     
+<tr>
+<td colspan="1" rowspan="1">UNIX, Linux, and Mac</td><td colspan="1" rowspan="1">db-derby-10.11.1.1-bin.tar.gz</td>
+</tr>
+
+</table>
+<p>If a more recent release is available, download that,
+   then substitute that version number 
+for <span class="codefrag">10.11.1.1</span> in the following instructions.
+   </p>
+<a name="N100D0"></a><a name="derby_install"></a>
+<h3 class="boxed">Install Derby</h3>
+<p>
+    Choose the directory into which you want to install the Derby software.
+    You must have write permissions to this directory.
+    The sample instructions below use <span class="codefrag">C:\Apache</span> for Windows and
+    <span class="codefrag">/opt/Apache</span> for UNIX; be sure to use your actual location.
+    Copy the software distribution to the location you choose, then
+    extract it as shown below.
+    </p>
+<p class="code-block">Windows (use your extraction tool e.g. WinZip -- these instructions use mks unzip):
+mkdir C:\Apache
+copy db-derby-10.11.1.1-bin.zip C:\Apache
+cd C:\Apache
+unzip db-derby-10.11.1.1-bin.zip
+</p>
+<p class="code-block">UNIX:
+mkdir /opt/Apache
+cp db-derby-10.11.1.1-bin.tar.gz /opt/Apache
+cd /opt/Apache
+tar xzvf db-derby-10.11.1.1-bin.tar.gz
+</p>
+<p>In both cases, the software will now be extracted into a subdirectory
+    named <span class="codefrag">db-derby-10.11.1.1-bin</span>. 
+   </p>
+<a name="N100EE"></a><a name="set_derby_install"></a>
+<h3 class="boxed">Set DERBY_INSTALL</h3>
+<p>
+Set the <span class="codefrag">DERBY_INSTALL</span> variable to the location where you
+installed Derby.
+Examples are shown below, but be sure to use the actual location on 
+your system:
+</p>
+<p class="code-block">Windows:
+C:\&gt; set DERBY_INSTALL=C:\Apache\db-derby-10.11.1.1-bin
+</p>
+<p class="code-block">UNIX Korn Shell:
+$ export DERBY_INSTALL=/opt/Apache/db-derby-10.11.1.1-bin
+</p>
+<a name="N10103"></a><a name="derby_configure"></a>
+<h3 class="boxed">Configure Embedded Derby</h3>
+<p>To use Derby in its embedded mode
+      set your <span class="codefrag">CLASSPATH</span> to include the jar files listed below:</p>
+<ul>
+     
+<li> 
+<span class="codefrag">derby.jar</span>: contains the Derby engine and the
+              Derby Embedded JDBC driver</li>
+     
+<li> 
+<span class="codefrag">derbytools.jar</span>:
+           optional, provides the <span class="codefrag">ij</span> tool that is used
+          by a couple of sections in this tutorial</li>
+
+</ul>
+<p>
+   You can set your <span class="codefrag">CLASSPATH</span> explicitly with the command
+   shown below:
+</p>
+<p class="code-block">Windows:
+C:\&gt; set CLASSPATH=%DERBY_INSTALL%\lib\derby.jar;%DERBY_INSTALL%\lib\derbytools.jar;.
+</p>
+<p class="code-block">UNIX:
+$ export CLASSPATH=$DERBY_INSTALL/lib/derby.jar:$DERBY_INSTALL/lib/derbytools.jar:.
+</p>
+<p>
+Notice that multiple entries in the class path are separated by a
+semicolon (;) on Windows and a colon (:) on UNIX.
+</p>
+<p>
+   The Derby software provides another way to set <span class="codefrag">CLASSPATH</span>,
+   using shell scripts (UNIX) and batch files (Windows).
+   This tutorial shows how to set
+   <span class="codefrag">CLASSPATH</span> explicitly 
+   and also how to use the Derby scripts to set it.
+</p>
+<p>
+   Change directory now into the
+   <span class="codefrag">DERBY_INSTALL/bin</span> directory.
+    The <span class="codefrag">setEmbeddedCP.bat</span> (Windows) 
+    and <span class="codefrag">setEmbeddedCP.ksh</span>
+     (UNIX) scripts use the <span class="codefrag">DERBY_INSTALL</span> variable to set the 
+     <span class="codefrag">CLASSPATH</span>  for Derby embedded usage. 
+     You can edit the script itself to set 
+     <span class="codefrag">DERBY_INSTALL</span>, or you can let the script get 
+     <span class="codefrag">DERBY_INSTALL</span> from your environment. 
+     Since you already set <span class="codefrag">DERBY_INSTALL</span> in the 
+     "<a href="#set_derby_install">Set DERBY_INSTALL</a>" section above, 
+     you don't need to edit the script, 
+     so go ahead and execute it as shown below:
+   </p>
+<p class="code-block">Windows:
+C:\&gt; cd %DERBY_INSTALL%\bin
+C:\Apache\db-derby-10.11.1.1-bin\bin&gt; setEmbeddedCP.bat
+</p>
+<p class="code-block">UNIX:
+$ cd $DERBY_INSTALL/bin
+$ . setEmbeddedCP.ksh
+</p>
+<a name="N10163"></a><a name="derby_verify"></a>
+<h3 class="boxed">Verify Derby</h3>
+<p>Run the <span class="codefrag">sysinfo</span> command, as shown below, to output Derby
+system information:
+</p>
+<p class="code-block">java org.apache.derby.tools.sysinfo</p>
+<p>Successful output will look something like this:</p>
+<p class="code-block">
+------------------ Java Information ------------------
+Java Version:    1.7.0_11
+Java Vendor:     Oracle Corporation
+Java home:       /Library/Java/JavaVirtualMachines/jdk1.7.0_11.jdk/Contents/Home/jre
+Java classpath:  /Users/me/src:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derby.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derby.war:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_cs.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_de_DE.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_es.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_fr.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_hu.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_it.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_ja_JP.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_ko_KR.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_pl.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_pt_BR.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_ru.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_zh_CN.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyLocale_zh_TW.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyclient.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbynet.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyrun.jar:/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbytools.jar:/Users/me/sw/db2jcc/lib/db2jcc.jar:/Users/me/sw/db2jcc/lib/db2jcc_license_c.jar:/Users/me/src:/Users/me/sw/demo/tableFunctionWhitePaper/jars/vtis-example.jar
+OS name:         Mac OS X
+OS architecture: x86_64
+OS version:      10.7.5
+Java user name:  me
+Java user home:  /Users/me
+Java user dir:   /Users/me/derby/mainline
+java.specification.name: Java Platform API Specification
+java.specification.version: 1.7
+java.runtime.version: 1.7.0_11-b21
+--------- Derby Information --------
+[/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derby.jar] 10.11.1.1 - (1616546)
+[/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbytools.jar] 10.11.1.1 - (1616546)
+[/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbynet.jar] 10.11.1.1 - (1616546)
+[/Users/me/sw/z/10.10.1/db-derby-10.11.1.1-bin/lib/derbyclient.jar] 10.11.1.1 - (1616546)
+------------------------------------------------------
+----------------- Locale Information -----------------
+Current Locale :  [English/United States [en_US]]
+Found support for locale: [cs]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [de_DE]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [es]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [fr]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [hu]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [it]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [ja_JP]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [ko_KR]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [pl]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [pt_BR]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [ru]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [zh_CN]
+	 version: 10.11.1.1 - (1616546)
+Found support for locale: [zh_TW]
+	 version: 10.11.1.1 - (1616546)
+------------------------------------------------------
+</p>
+<p>
+The output on your system will probably be somewhat different 
+from the output shown above, 
+but it should reflect the correct location 
+of jar files on your machine and there shouldn't be any errors. 
+If you see an error like the one below, 
+it means your class path is not correctly set:
+</p>
+<p class="code-block">$ java org.apache.derby.tools.sysinfo
+Exception in thread "main" java.lang.NoClassDefFoundError: 
+     org/apache/derby/tools/sysinfo
+</p>
+<p>
+Echo your <span class="codefrag">CLASSPATH</span>, as shown below,
+then double check each entry in your class path to verify that the jar file 
+is where you expect it:
+</p>
+<p class="code-block">Windows:
+C:\&gt; echo %CLASSPATH% 
+C:\Apache\DB-DER~1.1-B\lib\derby.jar;C:\Apache\DB-DER~1.1-B\lib\derbytools.jar;
+</p>
+<p class="code-block">UNIX:
+$ echo $CLASSPATH
+/opt/Apache/db-derby-10.11.1.1-bin/lib/derby.jar:/opt/Apache/db-derby-10.11.1.1-bin/lib/derbytools.jar:
+</p>
+<p>
+If <span class="codefrag">sysinfo</span> outputs valid information, you're
+ready to move to "<a href="ij_intro.html">Step 2: ij Basics</a>".
+</p>
+</div>
+
+
+</div>
+<!--+
+    |end content
+    +-->
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<!--+
+    |start bottomstrip
+    +-->
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2004-2014 Apache, Apache DB, Apache Derby, Apache Torque, Apache JDO, Apache DDLUtils, the Derby hat logo, the Apache JDO logo, and the Apache feather logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:derby-user@db.apache.org?subject=Feedback%C2%A0papers/DerbyTut/install_software.html">derby-user@db.apache.org</a>
+</div>
+<!--+
+    |end bottomstrip
+    +-->
+</div>
+</body>
+</html>

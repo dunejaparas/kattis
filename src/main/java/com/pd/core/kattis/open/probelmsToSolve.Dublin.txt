@@ -1,0 +1,68 @@
+General Submission Guideline
+
+
+
+You submissions are executed in a *NIX type environment. Assume software/shells etc are in their standard locations. 
+Nothing else.
+
+All programs should return a zero exit code on success.
+
+Java/Scala Devs - Ensure your classname matches the program name eg. fizzbuzz,spiral_printing, robot_movements etc.
+
+
+
+
+Question 1: Parenthesis 
+
+Given a string made up of the following 6 characters ( ) { } [ ] determine if it is well-formed or not. 
+Well-formed meaning Parentheses, braces and brackets match in nested pairs.
+
+
+
+Your program should accept as its first argument a path to a filename. Each line in this file contains a string 
+comprising the characters mentioned above. e.g.
+
+
+({[()]})
+
+([)]
+
+
+Print out True or False if the string is well-formed e.g. for the example above:
+True
+False
+
+
+
+Question 2: Reverse and Add
+
+
+
+The problem is as follows: choose a number, reverse its digits and add it to the original. 
+If the sum is not a palindrome (which means, it is not the same number from left to right and right to left), repeat this procedure. eg.
+
+195 (initial number) + 591 (reverse of initial number) = 786
+
+786 + 687 = 1473
+
+1473 + 3741 = 5214
+
+5214 + 4125 = 9339 (palindrome)
+
+In this particular case the palindrome 9339 appeared after the 4th addition. 
+This method leads to palindromes in a few step for almost all of the integers. But there are interesting exceptions. 
+196 is the first number for which no palindrome has been found. It is not proven though, that there is no such a palindrome.
+
+
+
+Your program should accept as its first argument a path to a filename. Each line in this file is one test case. 
+Each test case will contain an integer n < 4,294,967,295. Assume each test case will always have an answer and that it is computable 
+with less than 1000 iterations (additions)
+
+For each line of input, generate a line of output which is the number of iterations (additions) to compute the palindrome
+ and the resulting palindrome. (they should be on one line and separated by a single space character)
+
+
+
+
+First submission is considered final

@@ -1,0 +1,1233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.8">
+<meta name="Forrest-skin-name" content="pelt">
+<meta name="generator" content="">
+<meta name="" content="">
+<meta name="GENERATOR" content="">
+<title>Derby Network Client</title>
+<link type="text/css" href="../skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="../skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="../skin/print.css" rel="stylesheet">
+<link type="text/css" href="../skin/profile.css" rel="stylesheet">
+<script src="../skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="../skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="../skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../">
+</head>
+<body onload="init()">
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+<a href="http://www.apache.org/">apache</a> &gt; <a href="http://db.apache.org/">db</a><script src="../skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<!--+
+    |header
+    +-->
+<div class="header">
+<!--+
+    |start group logo
+    +-->
+<div class="grouplogo">
+<a href="http://db.apache.org/derby"><img class="logoImage" alt="Apache Derby" src="../images/derby-logo-web.png" title="Derby is a zero-admin Java RDBMS"></a>
+</div>
+<!--+
+    |end group logo
+    +-->
+<!--+
+    |start Project Logo
+    +-->
+<div class="projectlogoA1">
+<a href="http://db.apache.org"><img class="logoImage" alt="Apache DB Project" src="../images/db-logo-white.png" title="Apache DB creates and maintains database solutions."></a>
+</div>
+<!--+
+    |end Project Logo
+    +-->
+<!--+
+    |start Tabs
+    +-->
+<ul id="tabs">
+<li>
+<a class="unselected" href="../index.html">Home</a>
+</li>
+<li>
+<a class="unselected" href="../quick_start.html">Quick Start</a>
+</li>
+<li>
+<a class="unselected" href="../derby_downloads.html">Download</a>
+</li>
+<li>
+<a class="unselected" href="../derby_comm.html">Community</a>
+</li>
+<li>
+<a class="unselected" href="../manuals/index.html">Documentation</a>
+</li>
+<li class="current">
+<a class="selected" href="../blogs/index.html">Resources</a>
+</li>
+</ul>
+<!--+
+    |end Tabs
+    +-->
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<!--+
+    |start Subtabs
+    +-->
+<div id="level2tabs"></div>
+<!--+
+    |end Endtabs
+    +-->
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+
+             &nbsp;
+           </div>
+<!--+
+    |start Menu, mainarea
+    +-->
+<!--+
+    |start Menu
+    +-->
+<div id="menu">
+<div onclick="SwitchMenu('menu_1.1', '../skin/')" id="menu_1.1Title" class="menutitle">Blogs and Articles About Derby</div>
+<div id="menu_1.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../blogs/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../blogs/index.html#blogs">Blogs</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', '../skin/')" id="menu_1.1.3Title" class="menutitle">Articles</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div onclick="SwitchMenu('menu_1.1.3.1', '../skin/')" id="menu_1.1.3.1Title" class="menutitle">Tutorials, Tips and Tuning</div>
+<div id="menu_1.1.3.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../blogs/index.html#getstarted">Getting Started</a>
+</div>
+<div class="menuitem">
+<a href="../blogs/index.html#features">Features, Hints and Tips</a>
+</div>
+<div class="menuitem">
+<a href="../blogs/index.html#security">Security</a>
+</div>
+<div class="menuitem">
+<a href="../blogs/index.html#performance">Performance and Tuning</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3.2', '../skin/')" id="menu_1.1.3.2Title" class="menutitle">Tools and Migration</div>
+<div id="menu_1.1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../blogs/index.html#tools">Tools</a>
+</div>
+<div class="menuitem">
+<a href="../blogs/index.html#migration">Migration</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3.3', '../skin/')" id="menu_1.1.3.3Title" class="menutitle">Applications</div>
+<div id="menu_1.1.3.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../blogs/index.html#client">Client</a>
+</div>
+<div class="menuitem">
+<a href="../blogs/index.html#middletier">Middle Tier</a>
+</div>
+<div class="menuitem">
+<a href="../blogs/index.html#persistence">Persistence</a>
+</div>
+<div class="menuitem">
+<a href="../blogs/index.html#scalability">Scalability and Failover</a>
+</div>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', '../skin/')" id="menu_1.2Title" class="menutitle">Integration With Other Products</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../integrate/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../integrate/index.html#uses">What works with Derby?</a>
+</div>
+<div class="menuitem">
+<a href="../integrate/index.html#products">Product Writeups</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', '../skin/')" id="menu_1.3Title" class="menutitle">Eclipse Plug-ins</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../integrate/derby_plugin_info.html">Info</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.4', '../skin/')" id="menu_selected_1.4Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">Papers and Presentations</div>
+<div id="menu_selected_1.4" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../papers/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.2', '../skin/')" id="menu_1.4.2Title" class="menutitle">Derby Engine</div>
+<div id="menu_1.4.2" class="menuitemgroup">
+<div onclick="SwitchMenu('menu_1.4.2.1', '../skin/')" id="menu_1.4.2.1Title" class="menutitle">Javadoc</div>
+<div id="menu_1.4.2.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/engine">Engine</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/language">Language</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/tools">Tools</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/publishedapi">API</a>
+</div>
+</div>
+<div class="menuitem">
+<a href="../papers/derby_arch.html">Architecture</a>
+</div>
+<div class="menuitem">
+<a href="../papers/btree_package.html">BTree</a>
+</div>
+<div class="menuitem">
+<a href="../papers/pageformats.html">Disk Page Format</a>
+</div>
+<div class="menuitem">
+<a href="../papers/derby_htw.html">How Things Work</a>
+</div>
+<div class="menuitem">
+<a href="../papers/Intersect-design.html">Intersect &amp; Except</a>
+</div>
+<div class="menuitem">
+<a href="../papers/JDBCImplementation.html">JDBC</a>
+</div>
+<div class="menuitem">
+<a href="../papers/logformats.html">Log Format</a>
+</div>
+<div class="menuitem">
+<a href="../papers/recovery.html">Logging &amp; Recovery</a>
+</div>
+<div class="menuitem">
+<a href="../papers/optimizer.html">Optimizer</a>
+</div>
+<div class="menuitem">
+<a href="http://db.apache.org/derby/javadoc/engine/org/apache/derby/iapi/types/package-summary.html#package_description">Type System</a>
+</div>
+<div class="menuitem">
+<a href="../papers/versionupgrade.html">Versioning</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.4.3', '../skin/')" id="menu_selected_1.4.3Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">Derby Network Client</div>
+<div id="menu_selected_1.4.3" class="selectedmenuitemgroup" style="display: block;">
+<div class="menupage">
+<div class="menupagetitle">Functional Spec</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', '../skin/')" id="menu_1.4.4Title" class="menutitle">Derby Tutorial</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../papers/DerbyTut/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../papers/DerbyTut/install_software.html">Step 1: Install Software</a>
+</div>
+<div class="menuitem">
+<a href="../papers/DerbyTut/ij_intro.html">Step 2: ij Basics</a>
+</div>
+<div class="menuitem">
+<a href="../papers/DerbyTut/embedded_intro.html">Step 3: Embedded Derby</a>
+</div>
+<div class="menuitem">
+<a href="../papers/DerbyTut/ns_intro.html">Step 4: Derby Network Server</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', '../skin/')" id="menu_1.4.5Title" class="menutitle">Presentations</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../papers/ApacheCon.html">ApacheCon</a>
+</div>
+<div class="menuitem">
+<a href="../papers/MiscPresentations.html#Victorian+Java+User+Group">Victorian JUG 2008</a>
+</div>
+<div class="menuitem">
+<a href="../papers/MiscPresentations.html#OSCON+2005">OSCON 2005</a>
+</div>
+<div class="menuitem">
+<a href="../papers/MiscPresentations.html#Colorado+Software+Summit+2004">Colorado 2004</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', '../skin/')" id="menu_1.5Title" class="menutitle">The Apache Software Foundation</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://www.apache.org/licenses/">License</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/foundation/sponsorship.html">Donate</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/security/">Security</a>
+</div>
+<div class="menuitem">
+<a href="http://www.apache.org/">ASF Home</a>
+</div>
+</div>
+<!--+
+    |start Search
+    +-->
+<div class="searchbox">
+<hr>
+<form action="http://www.google.com/search" method="get">
+<input value="db.apache.org" name="sitesearch" type="hidden"><input onFocus="getBlank (this, 'Search the site with google');" size="18" name="q" id="query" type="text" value="Search the site with google">&nbsp; 
+                  <input name="Search" value="Search" type="submit">
+</form>
+</div>
+<!--+
+    |end search
+    +-->
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="../skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<!--+
+  |alternative credits
+  +-->
+<div id="credit2"></div>
+</div>
+<!--+
+    |end Menu
+    +-->
+<!--+
+    |start content
+    +-->
+<div id="content">
+<div class="trail">Font size: 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Derby Network Client</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Derby+Network+Client">Derby Network Client</a>
+<ul class="minitoc">
+<li>
+<a href="#">Overview</a>
+</li>
+<li>
+<a href="#-N1003A">Functionality</a>
+</li>
+<li>
+<a href="#-N1004B">JDBC Driver and DataSource names</a>
+<ul class="minitoc">
+<li>
+<a href="#Connection+URL+Format">Connection URL Format</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Ways+to+Connect+using+the+Derby+Client+Driver">Ways to Connect using the Derby Client Driver</a>
+<ul class="minitoc">
+<li>
+<a href="#Client+CLASSPATH">Client CLASSPATH</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#-N100B5">Data Source properties</a>
+<ul class="minitoc">
+<li>
+<a href="#-N101AD">Tracing</a>
+</li>
+<li>
+<a href="#ClientDataSource+Tracing">ClientDataSource Tracing</a>
+</li>
+<li>
+<a href="#DriverManager+Tracing">DriverManager Tracing</a>
+</li>
+<li>
+<a href="#-N101EC">ClientDataSource Tracing Examples</a>
+</li>
+<li>
+<a href="#-N10230">DriverManager Tracing Examples</a>
+</li>
+<li>
+<a href="#-N10249">Changing the Default Trace Level</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#-N102B1">Security</a>
+</li>
+<li>
+<a href="#-N10306">Packaging, Distribution and Versioning</a>
+</li>
+<li>
+<a href="#-N10314">Comparision and/or differences with the Derby Embedded Driver</a>
+</li>
+<li>
+<a href="#-N10334">Effects to existing documentation</a>
+</li>
+<li>
+<a href="#-N103A9">Miscellaneous</a>
+<ul class="minitoc">
+<li>
+<a href="#Tools">Tools</a>
+</li>
+<li>
+<a href="#Testing">Testing</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<a name="N10025"></a><a name="Derby+Network+Client"></a>
+<h2 class="boxed">Derby Network Client</h2>
+<div class="section">
+<hr>
+<p>Created: 4/11/05<br>Last update: 10/25/05 -- changed h4 tags to h3 (forrest hid data), and removed manual table of contents</p>
+<hr>
+<a name="N1002F"></a>
+<h3 class="boxed">Overview</h3>
+<p>The Derby network client provides network connectivity to the Derby Network Server. It is distributed as an additional jar file, derbyclient.jar, with an entirely independent code base from the embedded driver.</p>
+<p>The Derby network client is a type 4, JDBC compliant Driver, which attempts to match the Derby Embedded JDBC driver as much as possible. Initially, it will have some differences from the embedded driver, for example, some SQL States will remain null and error messages will not be localized in the initial offering. Hopefully, over time the functionality of the two drivers will converge.</p>
+<hr>
+<a name="N1003A"></a><a name="-N1003A"></a>
+<h3 class="boxed">Functionality</h3>
+<br>
+<br>
+<p>All functionality for the Derby network client is packaged in the derbyclient.jar file which will be added to the Derby distribution. The client application needs only to include the new jar and application classes in its classpath. derbyclient.jar has no dependencies on the tools, server, or derby database engine classes, nor do those classes depend on derbyclient.jar. Some new client classes are in the same package as the embedded driver, such as org.apache.derby.jdbc.ClientDriver, but the actual classes are contained only in the client jar file.</p>
+<p>The Derby network client allows connections via JDBC URL using DriverManager by its implementations of JDBC20 data sources, javax.sql.DataSource, javax.sql.ConnectionPoolDataSource. An implementation of javax.sql.XADataSource is also provided for network XA Support. The Derby network client provides a tracing facility to collect JDBC trace information and view protocol flows for debugging. Security mechanisms are also provided for user and password encryption. DataSource properties and connection attributes can be used to enable tracing, as well as security settings.</p>
+<p>Tools support for ij and dblook as well as test harness support is provided.</p>
+<p>The sections that follow will describe the functionality and provide examples of using each characteristic mentioned here.</p>
+<hr>
+<a name="N1004B"></a><a name="-N1004B"></a>
+<h3 class="boxed">JDBC Driver and DataSource names</h3>
+<p>The Derby network client classes and JDBC interfaces they implement are listed below.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+<tbody>
+<tr>
+<th>JDBC Interface</th><th>&nbsp;</th><th>Derby network client class</th>
+</tr>
+<tr>
+<td>java.sql.Driver</td><td>&nbsp;</td><td>org.apache.derby.jdbc.ClientDriver</td>
+</tr>
+<tr>
+<td>javax.sql.DataSource</td><td>&nbsp;</td><td>org.apache.derby.jdbc.ClientDataSource</td>
+</tr>
+<tr>
+<td>javax.sql.XADataSource</td><td>&nbsp;</td><td>org.apache.derby.jdbc.ClientXADataSource</td>
+</tr>
+<tr>
+<td>javax.sql.ConnectionPoolDataSource</td><td>&nbsp;</td><td>org.apache.derby.jdbc.ClientConnectionPoolDataSource</td>
+</tr>
+</tbody>
+</table>
+<a name="N10078"></a><a name="Connection+URL+Format"></a>
+<h4>Connection URL Format</h4>
+<p>The protocol for the client URL is jdbc:derby://. The embedded and client attributes are specified the same way. The embedded driver has been changed to reject URL's with a // following derby:</p>
+<p>
+<strong>Derby network client URL Format</strong>
+</p>
+<p>jdbc:derby://server[:port]/databaseName[;attributeKey=value]..</p>
+<p>An example of using this URL to connect to the Derby network server running on the localhost at port 1527 in ij is:</p>
+<p>ij&gt; connect `jdbc:derby://localhost:1527/sample;create=true;user=user1;password=secret4me';</p>
+<hr>
+<a name="N10088"></a><a name="Ways+to+Connect+using+the+Derby+Client+Driver"></a>
+<h3 class="boxed">Ways to Connect using the Derby Client Driver</h3>
+<a name="N1008C"></a><a name="Client+CLASSPATH"></a>
+<h4>Client CLASSPATH</h4>
+<p>Prior to using the Derby network client, the derbyclient.jar file needs to be added to the classpath on the client. On Windows, to add the derbyclient.jar file to your classpath, use the following command:</p>
+<p>set CLASSPATH=%CLASSPATH%;%DERBY_INSTALL%\lib\derbyclient.jar;</p>
+<p>When using the Derby client driver to connect to the Derby database, there are two general methodologies used to connect. The first method is to use the DriverManager. The second way to connect is to use one of the three DataSource classes listed above.</p>
+<p>To use the DriverManager, the first step is to load the ClientDriver.</p>
+<p>
+<strong>Loading the driver:</strong>
+</p>
+<pre></pre>
+<pre class="code">port java.sql.* ; ... try { Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance(); } catch (ClassNotFoundException e) { e.printStackTrace(); } catch(java.lang.InstantiationException instant) { instant.printStackTrace(); } catch(java.lang.IllegalAccessException illegal) { illegal.printStackTrace(); } ...</pre>
+<pre>
+<br>Now a connection can be made with the DriverManager. 
+<br>
+<strong>Connecting with the DriverManager:</strong> 
+
+</pre>
+<pre class="code">String url = "jdbc:derby://myhost.mydomain.com:1527/mydb;create=true;user=user1;password=secret4me"; connection = DriverManager.getConnection(url);</pre>
+<pre>
+<br>
+<strong>Connecting with the ClientDataSource:</strong> 
+</pre>
+<pre></pre>
+<pre class="code">import java.sql.*; import javax.sql.*; import org.apache.derby.jdbc.ClientDataSource; ... ClientDataSource ds=new ClientDataSource(); ds.setDatabaseName("sample"); ds.setServerName("localhost"); // host with listening network server. ds.setPortNumber(1527); // port of listening network server. ds.setUser("user1"); // Assign the user ID ds.setPassword("secret4me"); // Assign the password Connection con= ds.getConnection(); // Create a Connection object</pre>
+<pre> 
+
+
+</pre>
+<pre></pre>
+<hr>
+<pre>
+
+</pre>
+<a name="N100B5"></a><a name="-N100B5"></a>
+<h3 class="boxed">Data Source properties</h3>
+<pre>
+<br>The following data source properties are available on the ClientDataSource, 
+ClientConnectionPoolDataSource and the ClientXADataSource classes. 
+
+</pre>
+<pre class="code"></pre>
+<pre></pre>
+<table class="ForrestTable" cellspacing="1" cellpadding="3" border="1">
+<tbody>
+<tr>
+<th colspan="6">Standard JDBC Data Source Properties</th>
+</tr>
+<tr>
+<th>Property</th><th>Type</th><th>Description</th><th>Default</th><th>Req'd</th><th>Url Attr</th>
+</tr>
+<tr>
+<td><strong>databaseName*</strong></td><td>String</td><td>name of database</td><td>&nbsp;</td><td>X</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>dataSourceName*</strong></td><td>String</td><td>a data source name</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>description*</strong></td><td>String</td><td>a description of this data source</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>user*</strong></td><td>String</td><td>user's account name</td><td>APP</td><td>&nbsp;</td><td>user</td>
+</tr>
+<tr>
+<td><strong>password*</strong></td><td>String</td><td>user's database password</td><td>&nbsp;</td><td>&nbsp;</td><td>password</td>
+</tr>
+<tr>
+<td><strong>serverName</strong></td><td>String</td><td>host name or TCP/IP address where the server is listening for requests</td><td>localhost</td><td>&nbsp;</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>portNumber</strong></td><td>int</td><td>port number where the server is listening for requests</td><td>1527</td><td>&nbsp;</td><td>&nbsp;</td>
+</tr>
+<tr>
+<th colspan="6">Client Specific Data Source Properties</th>
+</tr>
+<tr>
+<td><strong>traceFile</strong></td><td>String</td><td>filename for tracing output. Setting this property turns on tracing. (See Tracing)</td><td>&nbsp;</td><td>&nbsp;</td><td>traceFile</td>
+</tr>
+<tr>
+<td><strong>traceDirectory</strong></td><td>String</td><td>directory for tracing output. Each connection will output to a separate file. Setting this property turns on tracing. (See Tracing)</td><td>&nbsp;</td><td>&nbsp;</td><td>traceDirectory</td>
+</tr>
+<tr>
+<td><strong>traceLevel</strong></td><td>int</td><td>level of client tracing if traceFile or traceDirectory are set</td><td>TRACE_ALL</td><td>&nbsp;</td><td>traceLevel</td>
+</tr>
+<tr>
+<td><strong>traceFileAppend</strong></td><td>boolean</td><td>true if tracing output should append to the existing trace file.</td><td>false</td><td>&nbsp;</td><td>traceFileAppend</td>
+</tr>
+<tr>
+<td><strong>securityMechanism</strong></td><td>int</td><td>security mechanism (See Security)</td><td>USER_ONLY_SECURITY</td><td>&nbsp;</td><td>securityMechanism</td>
+</tr>
+<tr>
+<td><strong>retrieveMessageText</strong></td><td>boolean</td><td>retrieve message text from server. A stored procedure is called to retrieve the message text with each SQLException and may start a new unit of work. Set to false if you do not want the performance impact or encounter issues with a new unit of work being started.</td><td>true</td><td>&nbsp;</td><td>retrieveMessageText</td>
+</tr>
+<tr>
+<th colspan="6">Server Specific Data Source Properties</th>
+</tr>
+<tr>
+<td colspan="6">These properties are translated into server specific URL attributes which are passed to the Derby embedded driver by appending them to the databaseName. For example, calling setDatabaseName("mydb") followed by setConnectionAttributes("create=true") will cause the string mydb;create=true to be sent to the server as the database name . The URL to connect to the database will therefore include these attributes.</td>
+</tr>
+<tr>
+<td><strong>connectionAttributes*</strong></td><td>String</td><td>set to the list of Derby embedded connection attributes separated by semi-colons. E.g., to specify an encryption bootPassword of "x8hhk2adf", and set upgrade to true, do the following: ds.setConnectionAttributes("bootPassword=x8hhk2adf;upgrade=true");</td><td>&nbsp;</td><td>&nbsp;</td><td>various. See Derby Documentation for a full list.</td>
+</tr>
+</tbody>
+</table>
+<pre> 
+<br>* This property is also available on the EmbeddedDataSource. All other data 
+  source properties are supplemental to the ClientDataSources. 
+ <br>Note: setAttributesAsPassword , which is available for the embedded data 
+  sources is not available for the client data source. It is not clear how to 
+  communicate it to the server. 
+</pre>
+<hr>
+<pre>
+
+</pre>
+<a name="N101AD"></a><a name="-N101AD"></a>
+<h4>Tracing</h4>
+<pre>
+<br>The Derby network client provides a tracing facility to collect JDBC trace 
+information and view protocol flows. Listed below are various ways to obtain 
+trace output. However, the easiest way to turn on tracing is to use the 
+traceFile attribute on the url in ij. The example below shows all tracing going 
+to the file trace.out from an ij session. 
+</pre>
+<pre class="code">ij&gt;connect 'jdbc:derby://localhost:1527/mydb;create=true;traceFile=trace.out;user=user1;password=secret4me';</pre>
+<pre> 
+
+</pre>
+<a name="N101BB"></a><a name="ClientDataSource+Tracing"></a>
+<h4>ClientDataSource Tracing</h4>
+<pre>
+<br>Three methods can be used to collect tracing data if obtaining connections 
+from the ClientDataSource. 
+</pre>
+<ol>
+<li>Use the <em>setLogWriter(java.io.PrintWriter)</em> method of ClientDataSource and set the PrintWriter to a non null value.</li>
+<li>Use the <em>setTraceFile(String filename)</em> method of ClientDataSource.</li>
+<li>Use the <em>setTraceDirectory(String dirname)</em> method of ClientDataSource to trace each connection flow in its own file for programs that have multiple connections.</li>
+</ol>
+<pre></pre>
+<a name="N101D3"></a><a name="DriverManager+Tracing"></a>
+<h4>DriverManager Tracing</h4>
+<pre>
+<br>If the DriverManager is used to obtain connections, two ways are available to 
+enable and collect tracing information. 
+</pre>
+<ul>
+<li>Use the <em>setLogWriter(java.io.PrintWriter)</em> method of DriverManager and set the PrintWriter to a non null value.</li>
+<li>Use the URL attributes <em>traceFile</em> or <em>traceDirectory</em> to set these properties prior to creating the connection with the <em>DriverManager.getConnection()</em> method.</li>
+</ul>
+<pre></pre>
+<a name="N101EC"></a><a name="-N101EC"></a>
+<h4>ClientDataSource Tracing Examples</h4>
+<pre>
+<br>Shown below are examples of each tracing type for the ClientDataSource 
+Tracing. 
+</pre>
+<ol>
+<li>Use the <em>setLogWriter(java.io.PrintWriter)</em> method of ClientDataSource and set the PrintWriter to a non null value.</li>
+</ol>
+<pre></pre>
+<pre>
+<span class="codefrag">/**
+*  Example to show how to set /enable tracing  when using DataSource
+*  - using the setLogWriter method on the datasource
+*/
+private static void sampleConnectUsingSimpleDataSource()
+ throws Exception
+{
+java.sql.Connection conn = null;
+ try
+ {
+javax.sql.DataSource ds =
+new org.apache.derby.jdbc.ClientDataSource();
+((org.apache.derby.jdbc.ClientDataSource) ds).setServerName("localhost");
+((org.apache.derby.jdbc.ClientDataSource) ds).setPortNumber(1527);
+((org.apache.derby.jdbc.ClientDataSource) ds).setDatabaseName("sampleDB;create=true");
+System.out.println("---------------------------------------------------------------");
+System.out.println("[TraceWithSetLogWriter]  Setting setLogWriter to trace.log.");
+System.out.println("Traces will be written into trace.log");
+java.io.PrintWriter pw = new PrintWriter(new FileOutputStream("trace.log"),true);
+ds.setLogWriter(pw);
+ 
+ 
+// Refine the level of tracing detail
+((org.apache.derby.jdbc.ClientDataSource) ds).
+setTraceLevel(org.apache.derby.jdbc.ClientDataSource.TRACE_CONNECTS |
+org.apache.derby.jdbc.ClientDataSource.TRACE_PROTOCOL_FLOWS);
+ 
+// This connection request is traced using trace level
+// TRACE_CONNECTS | TRACE_PROTOCOL_FLOWS
+conn = ds.getConnection("user1", "secretPassword");
+  java.sql.Statement s = conn.createStatement();
+try
+{
+ s.executeUpdate("DROP TABLE sampleTable");
+  }
+  catch(Exception e)
+  {
+  // ignore drop of table error
+}
+ 
+s.executeUpdate("CREATE TABLE sampleTable( sampleColumn int)");
+PreparedStatement ps = conn.prepareStatement("insert into sampleTable values(?)");
+ 
+  // do some inserts
+conn.setAutoCommit(false);
+ps.setInt(1,1);
+ps.setInt(1,2);
+ps.executeUpdate();
+conn.commit();
+ 
+// cleanup resources
+s.close();
+ps.close();
+conn.close();
+pw.flush();
+pw.close();
+}
+catch(java.sql.SQLException e)
+{
+e.printStackTrace();
+}
+}
+</span>
+
+</pre>
+<pre>  
+</pre>
+<ul>
+<li>Use the <em>setTraceFile(String filename)</em> method of ClientDataSource.</li>
+</ul>
+<pre></pre>
+<pre>
+<span class="codefrag">/**
+*  Example to show how to set /enable tracing when obtaining connections from DataSource
+*  - using the setTraceFile method on the datasource
+*/
+private static void sampleConnectUsingSimpleDataSource()
+ throws Exception
+{
+java.sql.Connection conn = null;
+ 
+ try
+ {
+javax.sql.DataSource ds =
+new org.apache.derby.jdbc.ClientDataSource();
+((org.apache.derby.jdbc.ClientDataSource) ds).setServerName("localhost");
+((org.apache.derby.jdbc.ClientDataSource) ds).setPortNumber(1527);
+((org.apache.derby.jdbc.ClientDataSource) ds).setDatabaseName("sampleDB;create=true");
+System.out.println("---------------------------------------------------------------");
+System.out.println("[TraceWithSetTraceFile]  Setting setTraceFile to trace.log.");
+System.out.println("Traces will be written into trace.log");
+((org.apache.derby.jdbc.ClientDataSource) ds).setTraceFile("trace.log");
+ 
+ 
+// Refine the level of tracing detail
+((org.apache.derby.jdbc.ClientDataSource) ds).
+setTraceLevel(org.apache.derby.jdbc.ClientDataSource.TRACE_CONNECTS |
+org.apache.derby.jdbc.ClientDataSource.TRACE_PROTOCOL_FLOWS);
+ 
+// This connection request is traced using trace level
+// TRACE_CONNECTS | TRACE_PROTOCOL_FLOWS
+conn = ds.getConnection("user1", "secretPassword");
+   java.sql.Statement s1 = conn.createStatement();
+try
+{
+ s1.executeUpdate("DROP TABLE sampleTable");
+  }
+  catch(Exception e)
+  {
+  // ignore drop of table error
+}
+ 
+s1.executeUpdate("CREATE TABLE sampleTable( sampleColumn int)");
+PreparedStatement ps = conn.prepareStatement("insert into sampleTable values (?)");
+ 
+conn.setAutoCommit(false);
+ps.setInt(1,1);
+ps.executeUpdate();
+conn.commit();
+ 
+// cleanup resources
+s1.close();
+ps.close();
+conn.close();
+}
+catch(java.sql.SQLException e) {
+e.printStackTrace();
+}
+}
+
+</span>
+
+</pre>
+<pre>  
+</pre>
+<ul>
+<li>Use the <em>setTraceDirectory(String dirname)</em> method of ClientDataSource to trace each connection flow in its own file for programs that have multiple connections.</li>
+</ul>
+<pre>
+<br>Call the <em>setTraceDirectory(String directoryName)</em> method on the 
+ClientDataSource or use the URL attribute traceDirectory=&lt;directory&gt; to 
+specify a directory for trace output. The directory must already exist. If the 
+traceDirectory property is enabled, then tracing of multiple connections on the 
+same datasource will be directed to separate files under the specified 
+directory. 
+<br>When tracing to a directory, each connection will be traced to a separate 
+file named traceFile_origination_n, where origination indicates the origination 
+of the log writer in use and can be "xads", "cpds", "ds", or "driver", 
+and n represents the nth connection against the datasource. The log writer 
+origination indicator in the file name maps to the log writer as follows: 
+</pre>
+<ul>
+<li>ds - ClientXADataSource</li>
+<li>cpds - ClientConnectionPoolDataSource</li>
+<li>ds - ClientDataSource</li>
+<li>driver - ClientDriver</li>
+</ul>
+<pre></pre>
+<pre> 
+<span class="codefrag">/**
+*  Example to show how to set /enable tracing when obtaining connections from DataSource
+*  - using the setTraceDirectory method on the DataSource
+*/
+private static void sampleConnectUsingSimpleDataSource()
+ throws Exception
+{
+java.sql.Connection conn = null;
+ 
+try {
+javax.sql.DataSource ds =
+new org.apache.derby.jdbc.ClientDataSource();
+((org.apache.derby.jdbc.ClientDataSource) ds).setServerName("localhost");
+((org.apache.derby.jdbc.ClientDataSource) ds).setPortNumber(1527);
+((org.apache.derby.jdbc.ClientDataSource) ds).setDatabaseName("sampleDB;create=true");
+((org.apache.derby.jdbc.ClientDataSource) ds).setTraceDirectory("myTraceDir");
+ 
+conn = ds.getConnection("user1", "secretPassword");
+   java.sql.Statement s1 = conn.createStatement();
+try
+{
+ s1.executeUpdate("DROP TABLE sampleTable");
+  }
+  catch(Exception e)
+  {
+      System.out.println("First time, expected exception in drop table as table not yet created in database" +e.getMessage());
+}
+ 
+s1.executeUpdate("CREATE TABLE sampleTable( sampleColumn int)");
+PreparedStatement ps = conn.prepareStatement("insert into sampleTable values (?)");
+ 
+conn.setAutoCommit(false);
+ps.setInt(1,1);
+ps.executeUpdate();
+conn.commit();
+ 
+// cleanup resources
+s1.close();
+ps.close();
+conn.close();
+ 
+  // Each connection trace will be in a file of its own prefixed
+  // by name set using the setTraceFile
+  // example : traceFile_origination_n. n is the nth connection against the datasource.
+  // origination indicates the origination of the logwriter in use and can be
+  // cpds, xads, ds, driver
+Connection conn2 = ds.getConnection("user2","password2");
+conn2.close();
+}
+catch(java.sql.SQLException e) {
+e.printStackTrace();
+}
+}
+</span>
+
+</pre>
+<pre></pre>
+<hr>
+<pre>
+
+</pre>
+<a name="N10230"></a><a name="-N10230"></a>
+<h4>DriverManager Tracing Examples</h4>
+<pre>
+<br>Shown below is an example of enabling tracing when obtaining connections 
+using the DriverManager API. 
+</pre>
+<ol>
+<li>Use the <em>setLogWriter(java.io.PrintWriter)</em> method of DriverManager and set the PrintWriter to a non null value.</li>
+</ol>
+<pre>
+
+<br>
+</pre>
+<pre>
+<span class="codefrag">/**
+*  Example to show how to set /enable tracing when obtaining connections from
+*  java.sql.DriverManager api.
+*  - using the setLogWriter method on the DriverManager api
+*/
+
+import java.sql.*;
+import javax.sql.*;       
+import org.apache.derby.jdbc.ClientDataSource;
+import java.io.PrintWriter;
+import java.io.FileOutputStream;
+
+...
+private static void sampleConnectWithURLUsingDriverManager()
+throws Exception
+{
+java.sql.Connection conn = null;
+ 
+try
+{
+Class.forName("org.apache.derby.jdbc.ClientDriver");
+}
+catch(ClassNotFoundException e)
+{
+System.out.println("[TraceWithSetLogWriter] Derby Client driver is not in the classpath.Check if derbyclient.jar is in your classpath!");
+return;
+}
+try
+{
+ System.out.println("---------------------------------------------------------------------");
+ System.out.println("Setting logging/tracing using setLogWriter on DriverManager to trace1.log");
+ java.sql.DriverManager.setLogWriter(new java.io.PrintWriter(new FileOutputStream("trace1.log")));
+}
+catch(Exception e)
+{
+System.out.println("[TraceWithSetLogWriter] Unable to set tracing/logging PrintWriter to trace.log");
+}
+ 
+// The traceLevel property is established through the URL syntax,
+// and driver tracing is directed to file "trace1.log"
+String databaseURL =
+"jdbc:derby://localhost:1527" +
+"/sampleDB;create=true;traceLevel=" +
+(org.apache.derby.jdbc.ClientDataSource.TRACE_PROTOCOL_FLOWS|org.apache.derby.jdbc.ClientDataSource.TRACE_CONNECTS);
+ 
+// Set other properties
+java.util.Properties properties = new java.util.Properties();
+properties.setProperty("user", "myname");
+properties.setProperty("password", "mypass");
+try
+{
+// This connection request is traced using trace level
+// TRACE_CONNECTS | TRACE_PROTOCOL_FLOWS
+conn = java.sql.DriverManager.getConnection(databaseURL, properties);
+ 
+  java.sql.Statement s = conn.createStatement();
+try
+{
+ s.executeUpdate("DROP TABLE sampleTable");
+  }
+  catch(Exception e)
+  {
+      System.out.println("First time, expected exception in drop table as table not yet created in database" +e.getMessage());
+}
+ 
+s.executeUpdate("CREATE TABLE sampleTable( sampleColumn int)");
+PreparedStatement ps = conn.prepareStatement("insert into sampleTable values(?)");
+ 
+  // do some inserts
+conn.setAutoCommit(false);
+ps.setInt(1,1);
+ps.setInt(1,2);
+ps.executeUpdate();
+conn.commit();
+ 
+// cleanup resources
+s.close();
+ps.close();
+conn.close();
+}
+catch(java.sql.SQLException e)
+{
+e.printStackTrace();
+}
+}
+</span>
+</pre>
+<pre></pre>
+<hr>
+<pre>
+
+</pre>
+<a name="N10249"></a><a name="-N10249"></a>
+<h4>Changing the Default Trace Level</h4>
+<pre>
+<br>The trace level defaults to ClientDataSource.TRACE_ALL. The tracing can be 
+changed by calling the setTraceLevel(int level) method or setting the URL 
+attribute traceLevel, as shown below. </pre>
+<pre>
+<span class="codefrag">String url = "jdbc:derby://myhost.mydomain.com:1528/mydb" +
+ ";traceFile=/u/user1/trace.out" +
+ ";traceLevel=" +
+ org.apache.derby.jdbc.ClientDataSource.TRACE_PROTOCOL_FLOWS;
+DriverManager.getConnection(url,"user1","secret4me");
+
+</span>
+</pre>
+<pre>
+<br>This table lists the available tracing levels and values. 
+</pre>
+<table class="ForrestTable" cellspacing="1" cellpadding="4" border="1">
+<tbody>
+<tr>
+<th>Trace Level</th><th>Value</th>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_NONE</td><td>0x0</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_CONNECTION_CALLS</td><td>0x1</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_STATEMENT_CALLS</td><td>0x2</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_RESULT_SET_CALLS</td><td>0x4</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_DRIVER_CONFIGURATION</td><td>0x10</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_CONNECTS</td><td>0x20</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_PROTOCOL_FLOWS</td><td>0x40</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_RESULT_SET_META_DATA</td><td>0x80</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_PARAMETER_META_DATA</td><td>0x100</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_DIAGNOSTICS</td><td>0x200</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_XA_CALLS</td><td>0x800</td>
+</tr>
+<tr>
+<td>org.apache.derby.jdbc.ClientDataSource.TRACE_ALL</td><td>0xFFFFFFFF;</td>
+</tr>
+</tbody>
+</table>
+<pre>
+<br>To specify more than one trace , use one of these techniques: 
+</pre>
+<ul>
+<li>Use bitwise OR (|) operators with two or more trace values. For example, to trace PROTOCOL flows and connection calls, specify this value for traceLevel:<br>
+<span class="codefrag">TRACE_PROTOCOL_FLOWS|TRACE_CONNECTION_CALLS</span>
+</li>
+<li>Use a bitwise complement ( ~ ) operator with a trace value to specify all except a certain trace. For example, to trace everything except PROTOCOL flows, specify this value for traceLevel:<br>
+<span class="codefrag">~TRACE_PROTOCOL_FLOWS</span>
+</li>
+</ul>
+<pre></pre>
+<hr>
+<pre>
+
+</pre>
+<a name="N102B1"></a><a name="-N102B1"></a>
+<h3 class="boxed">Security</h3>
+<pre>
+<br>Derby network client allows you to select a security mechanism by specifying 
+a value for the securityMechanism property. You can set this property in one of 
+the following ways: 
+</pre>
+<ul>
+<li>When using the <em>DriverManager</em> interface, set <em>securityMechanism</em> in a <em>java.util.Properties</em> object before you invoke the form of the <em>getConnection</em> method which includes the <em>java.util.Properties</em> parameter.</li>
+<li>When using the <em>DataSource</em> interface, and you are creating and deploying your own <em>DataSource</em> objects, invoke the <em>DataSource.setSecurityMechanism</em> method after you create a <em>DataSource</em> object.</li>
+</ul>
+<pre>
+<br>The table below lists the security mechanisms the Derby network client 
+supports, and the corresponding property value to specify to obtain this 
+securityMechanism. The default security mechanism is the user ID only if no password is set and User ID and password if password is set.
+The default user, if none is specified is APP. 
+</pre>
+<pre></pre>
+<table class="ForrestTable" cellspacing="1" cellpadding="4" border="1">
+<tbody>
+<tr>
+<th colspan="2">Security mechanisms supported by the Derby network client</th>
+</tr>
+<tr>
+<th>Security mechanism</th><th>securityMechanism property value</th><th>Comments</th>
+</tr>
+<tr>
+<td>User ID and password</td><td>ClientDataSource.CLEAR_TEXT_PASSWORD_SECURITY (0x03)</td><td>Default if password is set</td>
+</tr>
+<tr>
+<td>User ID only</td><td>ClientDataSource.USER_ONLY_SECURITY (0x04)</td><td>Default if password is not set</td>
+</tr>
+<tr>
+<td>Encrypted user ID and encrypted password</td><td>ClientDataSource.ENCRYPTED_USER_AND_PASSWORD_SECURITY (0x09)</td><td>Encryption requires a JCE Implementation that supports Diffie-Helman algorithm with a prime of 32 bytes</td>
+</tr>
+</tbody>
+</table>
+<pre>
+
+
+</pre>
+<hr>
+<pre>
+
+</pre>
+<a name="N10306"></a><a name="-N10306"></a>
+<h3 class="boxed">Packaging, Distribution and Versioning</h3>
+<pre>
+<br>The Derby network client will assume the version of the Derby release in 
+which it is offered (currently thought to be 10.1). 
+<br>A new jar file, derbyclient.jar, needs to be added to the distribution, which 
+will contain the client classes. The client classpath will require only 
+derbyclient.jar to access the server. Demo programs and server framework batch 
+files and scripts will need to be changed to use the Derby network client. 
+</pre>
+<hr>
+<pre>
+
+</pre>
+<a name="N10314"></a><a name="-N10314"></a>
+<h3 class="boxed">Comparision and/or differences with the Derby Embedded Driver</h3>
+<pre>
+<br>The following known differences exist between the embedded driver and the 
+network client driver. Many of these are already documented as Network Server 
+differences at <a href="http://db.apache.org/derby/docs/10.0/manuals/admin/hubprnt19.html#HDRSII-APPS-">http://db.apache.org/derby/docs/10.0/manuals/admin/hubprnt19.html#HDRSII-APPS-</a>. 
+Three differences that are listed in the server guide are not relevant with the 
+network client. XA is supported, error messages are retrieved by default and 
+user/password are not required. Below is a summary of the differences. 
+</pre>
+<ul>
+<li>Error messages and SQLStates are sometimes different and are sometimes null on the client, particularly for data conversion errors.</li>
+<li>Multiple SQL Exceptions and Warnings will only return a single Exception on the client. It will have the SQLState of the first exception and in the text will have the text of the additional Exceptions appended.</li>
+<li>There are no localized error messages for the client.</li>
+<li>The client driver has not been tested under security manager.</li>
+<li>The client driver fully materializes LOBS when the row is retrieved.</li>
+<li>Scrollable cursors (ResultSet.TYPE_SCROLL_SENSITIVE or ResultSet.TYPE_SCROLL_INSENSITIVE) are not supported if the resultset contains LOB data. TYPE_FORWARD_ONLY must be specified for result sets containing LOB data.</li>
+<li>To use encrypted user id and password, you need to have IBM JCE (Java Cryptography Extension) 1.2.1 or later. (DERBY-65)</li>
+</ul>
+<pre></pre>
+<hr>
+<pre>
+
+</pre>
+<a name="N10334"></a><a name="-N10334"></a>
+<h3 class="boxed">Effects to existing documentation</h3>
+<pre>
+<br>The following Derby Manuals should be updated to include the new client 
+driver. The Server Guide, Tools and Getting Started guides at least will be 
+affected. Currently they document using the network server with the IBM DB2 
+Universal JDBC Driver. In general, the current documentation is relevant to the 
+new driver except for the items listed below. 
+</pre>
+<pre></pre>
+<table class="ForrestTable" cellspacing="1" cellpadding="4" border="1">
+<tbody>
+<tr>
+<th colspan="2">URL</th>
+</tr>
+<tr>
+<th>Derby Network Client URL</th><th>Documented URL</th>
+</tr>
+<tr>
+<td>jdbc:derby://server[:port]/databaseName[;attributeKey=value]..</td><td>jdbc:derby:net//server[:port]/databaseName[;embeddedAttributeKey=value]..:clientAttributeKey=value;.</td>
+</tr>
+</tbody>
+</table>
+<pre></pre>
+<pre></pre>
+<table class="ForrestTable" cellspacing="1" cellpadding="4" border="1">
+<tbody>
+<tr>
+<th colspan="3">Driver and DataSource Names</th>
+</tr>
+<tr>
+<th>JDBC Interface</th><th>Derby Network Client</th><th>Documented Class Name</th>
+</tr>
+<tr>
+<td>java.sql.Driver</td><td>org.apache.derby.jdbc.ClientDriver</td><td>com.ibm.db2.jcc.DB2Driver</td>
+</tr>
+<tr>
+<td>javax.sql.DataSource</td><td>org.apache.derby.jdbc.ClientDataSource</td><td>com.ibm.db2.jcc.DB2DataSource</td>
+</tr>
+<tr>
+<td>javax.sql.XADataSource</td><td>org.apache.derby.jdbc.ClientXADataSource</td><td>com.ibm.db2.jcc.DB2XADataSource</td>
+</tr>
+<tr>
+<td>javax.sql.ConnectionPoolDataSource</td><td>org.apache.derby.jdbc.ClientConnectionPoolDataSource</td><td>com.ibm.db2.jcc.DB2ConnectionPoolDataSource</td>
+</tr>
+</tbody>
+</table>
+<pre></pre>
+<pre></pre>
+<table class="ForrestTable" cellspacing="1" cellpadding="4" border="1">
+<tbody>
+<tr>
+<th colspan="3">Miscellaneous Changes</th>
+</tr>
+<tr>
+<th>&nbsp;</th><th>Derby Network Client</th><th>Documented</th>
+</tr>
+<tr>
+<td>jar file name</td><td>derbyclient.jar</td><td>db2jcc.jar, db2jcc_licence_c.jar</td>
+</tr>
+<tr>
+<td>attribute to retrieve message text*</td><td>retrieveMessageText (default true)</td><td>retrieveMessagesFromServerOnGetMessage (default false)</td>
+</tr>
+<tr>
+<td>required datasource property settings</td><td>databaseName only required property</td><td>requires databaseName, serverName,driverType, user, password</td>
+</tr>
+</tbody>
+</table>
+<pre> 
+<br>*Note: The retrieveMessageText attribute should not be included in most of 
+  the examples as it now defaults to true. 
+ <br>Client data source properties, tracing and security needs to be documented 
+  as described above. 
+</pre>
+<hr>
+<pre>
+
+</pre>
+<a name="N103A9"></a><a name="-N103A9"></a>
+<h3 class="boxed">Miscellaneous</h3>
+<pre></pre>
+<a name="N103B0"></a><a name="Tools"></a>
+<h4>Tools</h4>
+<pre>
+<br>ij will recognize the new URL and load the driver automatically. dblook will 
+accept the client URL. sysinfo has been changed to locate the new jar file. 
+</pre>
+<a name="N103B7"></a><a name="Testing"></a>
+<h4>Testing</h4>
+<pre>
+<br>You can run the client regression tests by running the suite 
+derbynetclientmats. You can run individual tests with the client framework by 
+setting the framework system property to DerbyNetClient. An example of this is 
+shown below. java -Dframework=DerbyNetClient 
+org.apache.derbyTesting.functionTests.harness.RunTest lang/supersimple.sql 
+
+<br>You can run the Derby network client test suite as follows:
+<br>java org.apache.derbyTesting.functionTests.harness.RunSuite derbynetclientmats
+
+</pre>
+<hr>
+<pre>
+<br>[<a href="index.html">Back to Derby Papers</a>]
+
+</pre>
+</div>
+</div>
+<!--+
+    |end content
+    +-->
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<!--+
+    |start bottomstrip
+    +-->
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2004-2014 Apache, Apache DB, Apache Derby, Apache Torque, Apache JDO, Apache DDLUtils, the Derby hat logo, the Apache JDO logo, and the Apache feather logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</div>
+<div id="feedback">
+    Send feedback about the website to:
+  <a id="feedbackto" href="mailto:derby-user@db.apache.org?subject=Feedback%C2%A0papers/DerbyClientSpec.html">derby-user@db.apache.org</a>
+</div>
+<!--+
+    |end bottomstrip
+    +-->
+</div>
+</body>
+</html>
