@@ -1,6 +1,5 @@
 package com.pd.core.kattis.open;
 
-
 /*
  Question 1: Parenthesis
 
@@ -23,66 +22,69 @@ import java.io.*;
 import java.util.Stack;
 
 public class Parenthesis {
-    public boolean isParentesisOK(final String checkCurrentLine) {
-	final Stack<Character> bracesStack = new Stack<Character>();
-	for (int i = 0; i < checkCurrentLine.length(); i++) {
-	    final char currChar = checkCurrentLine.charAt(i);
-	    if (currChar == '{' || currChar == '(' || currChar == '[') {
-		bracesStack.push(currChar);
-	    }
+	private static final char OPEN_SQUARE = '[';
+	private static final char OPEN_BRACKET = '(';
+	private static final char OPEN_CURLY = '{';
+	private static final char CLOSE_SQUARE = ']';
+	private static final char CLOSE_BRACKET = ')';
+	private static final char CLOSE_CURLY = '}';
 
-	    if (currChar == '}' || currChar == ')' || currChar == ']') {
-		if (bracesStack.isEmpty()) {
-		    return false;
-		}
-
-		final char lastBrace = bracesStack.peek();
-		if (currChar == '}' && lastBrace == '{' || currChar == ')' && lastBrace == '(' || currChar == ']' && lastBrace == '[') {
-		    bracesStack.pop();
-		} else {
-		    return false;
-		}
-	    }
-	}
-	return bracesStack.isEmpty();
-    }
-
-
-    public void readFile(final String filePath) {
-	BufferedReader bufferedReader = null;
-	try {
-	    if (filePath != null && !filePath.trim().isEmpty()) {
-		final File fileToRead = new File(filePath);
-		if (fileToRead.exists()) {
-		    bufferedReader = new BufferedReader(new FileReader(fileToRead));
-		    if (bufferedReader.ready()) {
-			String currLine = null;
-			while ((currLine = bufferedReader.readLine()) != null) {
-			    if (isParentesisOK(currLine)) {
-				System.out.println("True");
-			    } else {
-				System.out.println("False");
-			    }
+	public boolean isParentesisOK(final String checkCurrentLine) {
+		final Stack<Character> bracesStack = new Stack<Character>();
+		for (int i = 0; i < checkCurrentLine.length(); i++) {
+			final char currChar = checkCurrentLine.charAt(i);
+			if (currChar == OPEN_CURLY || currChar == OPEN_BRACKET || currChar == OPEN_SQUARE) {
+				bracesStack.push(currChar);
 			}
-		    }
-		}
-	    }
-	} catch (final IOException e) {
-	} finally {
-	    try {
-		if (bufferedReader != null) {
-		    bufferedReader.close();
-		}
-	    } catch (final IOException e) {
-	    }
-	}
-    }
 
-    public static void main(final String[] args) {
-	if (args.length == 1 && args[0] != null) {
-	    final Parenthesis parenthesisCheckObj = new Parenthesis();
-	    parenthesisCheckObj.readFile(args[0]);
+			if (currChar == CLOSE_CURLY || currChar == CLOSE_BRACKET || currChar == CLOSE_SQUARE) {
+				if (bracesStack.isEmpty()) {
+					return false;
+				}
+
+				final char lastBrace = bracesStack.peek();
+				if (currChar == CLOSE_CURLY && lastBrace == OPEN_CURLY
+						|| currChar == CLOSE_BRACKET && lastBrace == OPEN_BRACKET
+						|| currChar == CLOSE_SQUARE && lastBrace == OPEN_SQUARE) {
+					bracesStack.pop();
+				} else {
+					return false;
+				}
+			}
+		}
+		return bracesStack.isEmpty();
 	}
-    }
+
+	public void readFile(final String filePath) {
+		if (filePath != null && !filePath.trim().isEmpty()) {
+			final File fileToRead = new File(filePath);
+			if (fileToRead.exists()) {
+				try (final BufferedReader bufferedReader = new BufferedReader(new FileReader(fileToRead))) {
+					if (bufferedReader.ready()) {
+						String currLine = null;
+						while ((currLine = bufferedReader.readLine()) != null) {
+							if (isParentesisOK(currLine)) {
+								System.out.println("True");
+							} else {
+								System.out.println("False");
+							}
+						}
+					}
+				} catch (final IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+
+	public static void main(final String[] args) {
+		String filePath = "./src/main/java/com/pd/core/kattis/open/inputFileParenthesis.txt";
+		if (args.length == 1 && args[0] != null) {
+			filePath = args[0];
+		}
+		final Parenthesis parenthesisCheckObj = new Parenthesis();
+		parenthesisCheckObj.readFile(filePath);
+	}
 
 }
